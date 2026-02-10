@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bir Şans Daha</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff2f5b;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 25px;
+            animation: fadeIn 1s ease;
+        }
+
+        .heart {
+            font-size: 32px;
+            animation: beat 1s infinite;
+            color: #ff4d6d;
+            margin-bottom: 15px;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="heart">❤️</div>
+    <h1>Bir Şans Daha</h1>
+
+    <p>
+        Bana kırgınlığının sebebini anlıyorum.<br>
+        Belki birbirimizi tam olarak anlatamadık.<br>
+        Hatalarımın farkına vararak büyüdüm.<br>
+        Ve hiçbir zaman böyle şeyleri hayatımda bir zorunluluk olarak görmedim.<br><br>
+
+        Sen gerçekten benim değer verdiğim sayılı insanlardansın.<br>
+        Uzun bir zaman sonra hayatımda güzel şeylerin olduğunu hissettim<br>
+        ve bu duyguların hepsinde sen varsın.<br><br>
+
+        Seni çok özlüyorum.
+    </p>
+
+    <button onclick="showMessage()">Kalbimi Okur musun?</button>
+
+    <div class="hidden" id="message">
+        <p>
+            Seni zorlamak istemiyorum.<br>
+            Sadece bir şans istiyorum…<br>
+            Her şeyi daha doğru, daha sakin ve daha güzel yapmak için.
+        </p>
+        <div class="heart">💗</div>
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
